@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+    http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+<!--    在这里定义数据库初始化-->
+<!--    <include file="classpath:config/liquibase/changelog/init/init_tables.xml" relativeToChangelogFile="false"/>-->
+<!--    <include file="classpath:config/liquibase/changelog/init/data/init_data.xml" relativeToChangelogFile="false"/>-->
+
+<!--    在这里定义随着应用的升级对数据库的改动-->
+    <include file="changelog.xml" relativeToChangelogFile="true"/>
+
+</databaseChangeLog>

@@ -1,0 +1,27 @@
+#-----------------server---------------
+server:
+  port: 8080
+  servlet:
+    context-path: /censor
+#-----------------server---------------
+
+#-----------------spring->mysql,redis,session,mybatis---------------
+spring:
+  #数据源配置
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/compliance_test?createDatabaseIfNotExist=true&useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  liquibase:
+    enabled: true
+    contexts: dev
+    change-log: classpath:config/liquibase/changelog/master.xml
+    user: root
+    password: 123456
+    url: jdbc:mysql://127.0.0.1:3306/compliance_test?createDatabaseIfNotExist=true&useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    drop-first: false
+#    default-schema: compliance_test2
+#    liquibase-schema: compliance_test2
+

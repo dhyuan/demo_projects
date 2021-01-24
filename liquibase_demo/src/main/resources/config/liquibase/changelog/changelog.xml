@@ -1,0 +1,44 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet id="rollback1" author="user">
+        <createTable tableName="roolback" schemaName="compliance_test">
+            <column name="id" type="int"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="roolback"/>
+        </rollback>
+    </changeSet>
+    <changeSet id="tag1" author="dhyuan">
+        <tagDatabase tag="version_1.3" />
+    </changeSet>
+    <changeSet author="yangguicheng (generated)" id="1">
+        <createTable remarks="公司表" tableName="tbl_test">
+            <column name="id" remarks="主键" type="VARCHAR(32)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" remarks="name" type="VARCHAR(200)"/>
+            <column name="value" remarks="value" type="VARCHAR(255)"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="tbl_test"/>
+        </rollback>
+    </changeSet>
+
+    <changeSet author="yangguicheng (generated)" id="2">
+        <createTable remarks="公司表" tableName="tbl_test2">
+            <column name="id" remarks="主键" type="VARCHAR(32)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" remarks="name" type="VARCHAR(200)"/>
+            <column name="value" remarks="value" type="VARCHAR(255)"/>
+        </createTable>
+        <rollback>
+            <dropTable tableName="tbl_test2"/>
+        </rollback>
+    </changeSet>
+
+</databaseChangeLog>
