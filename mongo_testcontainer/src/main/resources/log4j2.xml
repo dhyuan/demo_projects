@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="STDOUT" target="SYSTEM_OUT">
+            <PatternLayout>
+                <pattern>[%-5p] %d(%r) --> [%t] [requestId:%X{request.id}] %l: %m %x %n</pattern>
+            </PatternLayout>
+        </Console>
+    </Appenders>
+    <loggers>
+        <logger name="org.springframework" level="warn" />
+        <Root level="info">
+            <AppenderRef ref="STDOUT"/>
+        </Root>
+    </loggers>
+</Configuration>
