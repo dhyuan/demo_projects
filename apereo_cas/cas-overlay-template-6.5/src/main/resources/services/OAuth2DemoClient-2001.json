@@ -1,0 +1,10 @@
+{
+  "@class" : "org.apereo.cas.support.oauth.services.OAuthRegisteredService",
+  "clientId": "oauth2DemoClientID",
+  "clientSecret": "clientSecret",
+  "serviceId" : "^(https|imaps)://<redirect-uri>.*",
+  "name" : "OAuth2DemoClient",
+  "id" : 2001,
+  "supportedGrantTypes": [ "java.util.HashSet", [ "password", "authorization_code", "client_credentials", "refresh_token"] ],
+  "supportedResponseTypes": [ "java.util.HashSet", [ "token", "code", "device_code"] ]
+}

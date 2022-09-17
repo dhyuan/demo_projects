@@ -127,6 +127,9 @@ dependencies {
     implementation "org.apereo.cas:cas-server-core-api-configuration-model"
     implementation "org.apereo.cas:cas-server-webapp-init"
 
+    // For actuator
+    implementation "org.apereo.cas:cas-server-support-reports"
+
     // Use the MongoDB to store the user/password information.
     implementation "org.apereo.cas:cas-server-support-mongo"
 
@@ -134,6 +137,9 @@ dependencies {
 //    implementation "org.apereo.cas:cas-server-support-json-service-registry"
     // Use the MongoDB to register the services.
     implementation "org.apereo.cas:cas-server-support-mongo-service-registry"
+
+    // OAuth
+    implementation "org.apereo.cas:cas-server-support-oauth-webflow"
 
     if (project.hasProperty("casModules")) {
         def dependencies = project.getProperty("casModules").split(",")

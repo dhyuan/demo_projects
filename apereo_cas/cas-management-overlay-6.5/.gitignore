@@ -45,3 +45,5 @@ tmp/
 ./apache-tomcat
 apache-tomcat.zip
 config-metadata.properties
+
+*.gz
