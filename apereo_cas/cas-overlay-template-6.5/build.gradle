@@ -130,6 +130,9 @@ dependencies {
     // For actuator
     implementation "org.apereo.cas:cas-server-support-reports"
 
+    // https://apereo.github.io/cas/6.5.x/authentication/Permissive-Authentication.html#json-file
+    implementation "org.apereo.cas:cas-server-support-generic"
+
     // Use the MongoDB to store the user/password information.
     implementation "org.apereo.cas:cas-server-support-mongo"
 
